@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 480px;
+            height: 480px;
+            background: url(erik_ce204002.jpg) no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <script>
+        var div = document.querySelector('div');
+        var positionY = 0;
+        var flag = 1;
+        var timer = setInterval(function() {
+            if (flag) {
+                div.style.backgroundPosition = '0 -' + positionY + 'px';
+                positionY += 480;
+            } else {
+                div.style.backgroundPosition = '0 -' + positionY + 'px';
+                positionY -= 480;
+            }
+
+
+
+            if (positionY == 7680) {
+                flag = 0;
+            }
+            if (positionY == 0) {
+                flag = 1;
+            }
+        }, 50)
+    </script>
+</body>
+
+</html>
